@@ -30,9 +30,12 @@ router.get('/', async function(req, res, next) {
     type: QueryTypes.SELECT
   });
 
-  console.log(conversations.length);
-
-  res.json(conversations);
+  res.json(conversations.map((value, index) => {
+    return {
+      id: index,
+      ...value,
+    }
+  }));
 });
 
 export default router;
