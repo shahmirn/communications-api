@@ -1,8 +1,6 @@
 import { Router } from 'express';
 import { QueryTypes } from 'sequelize';
 import sequelize from '../models/db';
-import Sms from '../models/Sms';
-import VoiceCalls from '../models/VoiceCalls';
 var router = Router();
 
 /* GET all communications */
@@ -24,6 +22,8 @@ router.get('/', async function(req, res, next) {
   if (type) {
     query += ` AND type IN (:type)`;
   }
+
+  query += ' ORDER BY datetime desc';
 
   const conversations = await sequelize.query(query,
   {
