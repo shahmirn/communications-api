@@ -13,6 +13,7 @@ router.get('/', async function(req, res, next) {
   
   console.dir(req.query);
 
+  // Ideally we'd be able to use the Sms and VoiceCalls models defined in the models folder, but
   // Sequelize apparently doesn't have built-in support for Union queries, so we gotta fall back to a raw query
   // I learned this after I'd already picked it, and time constraints mean I gotta keep going down this path
   let query = `SELECT * FROM (SELECT datetime, "to", "from", "message", "sms" as "type" FROM 'sms' UNION SELECT datetime, "to", "from", "" as "message", "voice" as "type" FROM 'voice_calls')  where 1=1`;
