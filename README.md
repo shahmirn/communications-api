@@ -31,7 +31,6 @@ Derived Requirements:
 ## Todo's
 - Add unit tests
 - Add query param validation
-- Add production build
 
 ## References:
 
