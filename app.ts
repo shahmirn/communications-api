@@ -1,5 +1,4 @@
 import express from 'express';
-import { join } from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 

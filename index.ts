@@ -3,8 +3,10 @@
  */
 
 import app from './app';
-var debug = require('debug')('communications-api:server');
+import Debug from "debug";
 import { createServer } from 'http';
+
+const debug = Debug('communications-api:server');
 
 /**
  * Get port from environment and store in Express.
