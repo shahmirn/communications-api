@@ -10,8 +10,6 @@ router.get('/', async function(req, res, next) {
 
   const from = req.query.from as string;
   const type = typeQuery ? typeQuery.split(',') : null;
-  
-  console.dir(req.query);
 
   // Ideally we'd be able to use the Sms and VoiceCalls models defined in the models folder, but
   // Sequelize apparently doesn't have built-in support for Union queries, so we gotta fall back to a raw query
