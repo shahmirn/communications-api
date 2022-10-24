@@ -9,7 +9,7 @@ User Stories:
 Derived Requirements:
 
 - Create an API that returns both sms and voice_calls sorted by datetime in descending order.
-    - Support returning only sms or voice_calls
+    - Support returning the type of conversation
     - Support searching for conversations from a specific phone nubmer
 
 ## Version
