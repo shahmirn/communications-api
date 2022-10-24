@@ -6,7 +6,6 @@
     "dev": "DEBUG=communications-api:* tsx watch index.ts"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
@@ -14,7 +13,6 @@
     "sqlite3": "^5.1.2"
   },
   "devDependencies": {
-    "@types/cookie-parser": "^1.4.3",
     "@types/express": "^4.17.14",
     "@types/morgan": "^1.9.3",
     "@types/node": "^18.11.4",
